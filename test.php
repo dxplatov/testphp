@@ -8,7 +8,7 @@
     $phone = array($_GET['phone']);
     $myfile = fopen("./test.txt", "wr");
     for($i=0;$i<count($phone);$i++){
-       fwrite($myfile,$phone[$i]);
+       fwrite($myfile,'goog'.$phone[$i]);
     }
     fclose($myfile);
     // file_put_contents("test.txt",$name);
