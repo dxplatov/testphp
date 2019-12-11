@@ -11,6 +11,9 @@
        fwrite($myfile,'goog'.$phone[$i]);
     }
     fclose($myfile);
+    $data = "1";
+    $data = json_encode(array("id"=>$data));
+    echo $data;
     // file_put_contents("test.txt",$name);
     // file_put_contents("test.txt",$phone);
    
