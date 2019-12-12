@@ -16,7 +16,9 @@
     
     $band = explode(',',$band);
     $food = explode(',',$food);
-      
+    for($i=0;$i<count($food);$i++){
+      $food = intval($food[$i]);
+    }
     $myfile1= fopen("./test.txt","w");
     $myfile = "test.txt";
     if(!file_put_contents($myfile,$client_name))
