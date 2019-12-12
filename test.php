@@ -17,7 +17,7 @@
     $band = explode(',',$band);
     $food = explode(',',$food);
     for($i=0;$i<count($food);$i++){
-      $food = intval($food[$i]);
+      $food[$i] = intval($food[$i]);
     }
     $myfile1= fopen("./test.txt","w");
     $myfile = "test.txt";
@@ -51,6 +51,7 @@
         echo "8";
       }
     }
+    print_r()
     fclose($myfile1);
     $data = "1";
     $data = json_encode(array("man"=>$data));
