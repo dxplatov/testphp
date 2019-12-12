@@ -16,20 +16,37 @@
     
     $band = explode(',',$band);
     $food = explode(',',$food);
-
+      
     $myfile = fopen("./test.txt", "wr");
-    file_put_contents($myfile,$client_name);
-    file_put_contents($myfile,$email);
-    file_put_contents($myfile,$message);
-    file_put_contents($myfile,$no_of_people);
-    file_put_contents($myfile,$status);
-    file_put_contents($myfile,$phone);
+    if(!file_put_contents($myfile,$client_name))
+    {
+      echo "1";
+    }
+    if(!file_put_contents($myfile,$email)){
+      echo "2";
+    }
+    if(file_put_contents($myfile,$message)){
+      echo "3";
+    }
+    if(file_put_contents($myfile,$no_of_people)){
+      echo "4";
+    }
+    if(!file_put_contents($myfile,$status)){
+      echo "5";
+    }
+    if(file_put_contents($myfile,$phone)){
+      echo "6";
+    }
     file_put_contents($myfile,$date);
     for($i=0;$i<count($band);$i++){
-      file_put_contents($myfile,$band[$i]);
+      if(!file_put_contents($myfile,$band[$i])){
+        echo "7";
+      }
     }
     for($i=0;$i<count($food);$i++){
-      file_put_contents($myfile,$food[$i]);
+      if(!file_put_contents($myfile,$food[$i])){
+        echo "8";
+      }
     }
     $data = "1";
     $data = json_encode(array("id"=>$data));
