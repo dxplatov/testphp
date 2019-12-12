@@ -13,11 +13,11 @@
     $date = $_GET['date'];
     $band = $_GET['band'];
     $food=$_GET['food'];
-    
+    $food_1 = array();
     $band = explode(',',$band);
     $food = explode(',',$food);
     for($i=0;$i<count($food);$i++){
-      $food[$i] = intval($food[$i]);
+      $food_1[$i] = intval($food[$i]);
     }
     $myfile1= fopen("./test.txt","w");
     $myfile = "test.txt";
