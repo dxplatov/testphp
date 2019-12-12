@@ -51,8 +51,7 @@
         echo "8";
       }
     }
-    print_r()
-    fclose($myfile1);
+    
     $data = "1";
     $data = json_encode(array("man"=>$data));
     echo $data;
